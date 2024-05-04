@@ -1,0 +1,254 @@
+/*
+? http://meyerweb.com/eric/tools/css/reset/
+? v2.0 | 20110126
+? License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  /*
+    ! Download esse JetBrains Mono fonts : https://www.jetbrains.com/lp/mono/
+    ! Para mais fonts acessar: https://fonts.google.com/
+    ! truetype => é tipo de formato de fontes [ ./font/JetBrainsMono.ttf ]
+    ! woff => é tipo de formato de fontes [ ./font/JetBrainsMono-Bold.woff ]
+    ! svg => é tipo de formato de fontes [ ./font/JetBrainsMono-Bold.svg ]
+    ! embedded-opentype => é tipo de formato de fontes [ ./font/JetBrainsMono.eot ]
+    ? É obrigatorio informa o font-weight e font-style.
+    ? É obrigatorio informa o nome da font: [ font-family: 'Qualquer nome'; ]
+    ? Exemplo font-weight [ font-weight: normal; ]
+    ? Exemplo font-style [ font-style: normal; ]
+  */
+  font-family: "JetBrainsMono-Regular";
+  src: url("../fonts/ttf/JetBrainsMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  line-height: 1;
+  font-size: 10px;
+  font-family: "JetBrainsMono-Regular", sans-serif;
+  font-style: normal;
+  color: #fff;
+  background-color: #000;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ! END RESET */
+section {
+  width: 100vw;
+  background-color: #000;
+  display: flex;
+  .body-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      width: 750px;
+      display: inherit;
+      justify-content: center;
+      flex-direction: column;
+      margin-right: calc(0.4rem + 0.2vw + 10px);
+      &:last-child {
+        width: none;
+      }
+      h1 {
+        font-size: clamp(1.3rem, 3.5vw, 2.1rem);
+        font-weight: 600;
+        margin-bottom: calc(0.4rem + 0.2vw + 10px);
+        span {
+          color: #22d4fd;
+        }
+      }
+      p {
+        font-size: clamp(0.8rem, 2.2vw, 1.3rem);
+        font-weight: 300;
+        margin-bottom: calc(0.4rem + 0.2vw + 10px);
+      }
+      div {
+        display: inline-block;
+        text-align: center;
+        button {
+          padding: calc(0.4rem + 0.9vw) calc(0.4rem + 2.3vw);
+          font-size: clamp(0.6rem, 2.2vw, 1.3rem);
+          border: 1px solid transparent;
+          font-weight: 900;
+          border-radius: 0.4rem;
+          background-color: #22d4fd;
+          color: #000;
+          &:last-child {
+            margin-left: calc(0.4rem + 0.2vw);
+            padding: calc(0.4rem + 0.9vw) calc(0.4rem + 2.9vw);
+          }
+          &:hover {
+            background-color: #000;
+            border-color: #22d4fd;
+            color: #22d4fd;
+          }
+        }
+      }
+    }
+    img {
+      width: max(calc(10.5rem + 15.5vw), calc(3.5rem + 8vw));
+    }
+  }
+}
+/* ! Smartphones (portrait) */
+@media only screen and (max-width: 1124px) {
+  section {
+    .body-container {
+      display: flex;
+      flex-direction: column-reverse;
+      div {
+        width: unset;
+        h1 {
+          margin: calc(0.4rem + 0.2vw);
+        }
+        p {
+          margin: 0 calc(0.4rem + 0.5vw);
+          margin-bottom: calc(0.4rem + 0.5vw);
+        }
+        div {
+          button {
+            padding: calc(0.4rem + 0.9vw) calc(0.4rem + 4.3vw);
+            &:last-child {
+              padding: calc(0.4rem + 0.9vw) calc(0.4rem + 4.9vw);
+            }
+          }
+        }
+      }
+      img {
+        margin-bottom: calc(0.4rem + 4vw);
+      }
+    }
+  }
+}
