@@ -1,0 +1,339 @@
+@font-face {
+  /*
+        ! Download esse JetBrains Mono fonts : https://www.jetbrains.com/lp/mono/
+        ! Para mais fonts acessar: https://fonts.google.com/
+        ! truetype => é tipo de formato de fontes [ ./font/JetBrainsMono.ttf ]
+        ! woff => é tipo de formato de fontes [ ./font/JetBrainsMono-Bold.woff ]
+        ! svg => é tipo de formato de fontes [ ./font/JetBrainsMono-Bold.svg ]
+        ! embedded-opentype => é tipo de formato de fontes [ ./font/JetBrainsMono.eot ]
+        ? É obrigatorio informa o font-weight e font-style.
+        ? É obrigatorio informa o nome da font: [ font-family: 'Qualquer nome'; ]
+        ? Exemplo font-weight [ font-weight: normal; ]
+        ? Exemplo font-style [ font-style: normal; ]
+    */
+  font-family: "JetBrainsMono-Regular";
+  src: url("../fonts/ttf/JetBrainsMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+? http://meyerweb.com/eric/tools/css/reset/
+? v2.0 | 20110126
+? License: none (public domain)
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  line-height: 1;
+  font-size: 10px;
+  font-family: "JetBrainsMono-Regular", sans-serif;
+  color: #fff;
+  background-color: #000;
+  overflow-x: hidden;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ! END RESET */
+header {
+  width: 100vw;
+  height: calc(1.5rem + 2.8vw + 0.6rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  nav {
+    width: 70%;
+    ul {
+      display: flex;
+      gap: calc(1.4vw + 1.4rem);
+      li {
+        button {
+          background-color: transparent;
+          border: none;
+          color: #22d4fd;
+          font-size: clamp(0.9rem, 4.5vw, 1.6rem);
+          font-weight: 400;
+          &:hover {
+            color: #1a7e94;
+          }
+        }
+      }
+    }
+  }
+  div {
+    width: calc(5.2rem + 1.7vw);
+    height: min(calc(1.5rem + 1.3vw), calc(0.5rem + 2.3vw));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #22d4fd;
+    border-radius: 10rem;
+    gap: calc(0.4rem + 1.2vw);
+    i {
+      font-size: clamp(0.9rem, 2.5vw, 1.6rem);
+      color: #fff;
+      &:last-child {
+        color: #22d4fd;
+      }
+    }
+  }
+}
+section {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container-section {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    .container-section-context {
+      width: calc(40rem + 5vw);
+      display: inherit;
+      flex-direction: column;
+      gap: calc(0.5rem + 0.2vw + 0.5rem);
+      .container-section-context-about-me {
+        width: calc(40rem + 5vw);
+        gap: calc(0.5rem + 0.2vw + 0.5rem);
+        display: none;
+        flex-direction: column;
+        h1 {
+          font-size: clamp(1.3rem, 3.5vw, 2.1rem);
+          font-weight: 400;
+        }
+        p {
+          font-size: clamp(0.3rem, 1.2vw, 1rem);
+          font-weight: 300;
+        }
+      }
+      .container-section-context-home {
+        display: inherit;
+        flex-direction: column;
+        h1 {
+          font-size: clamp(1.3rem, 3.5vw, 2.1rem);
+          font-weight: 400;
+          span {
+            color: #22d4fd;
+          }
+        }
+        p {
+          font-size: clamp(0.8rem, 2.2vw, 1.3rem);
+          font-weight: 300;
+        }
+      }
+      div {
+        display: inherit;
+        justify-content: center;
+        gap: calc(0.6rem + 1.3vw + 0.5rem);
+        a {
+          text-decoration: none;
+          color: #22d4fd;
+          font-size: clamp(0.8rem, 2.2vw, 1.1rem);
+          padding: calc(0.4rem + 0.5vh + 0.3rem) calc(0.4rem + 4vh + 0.3rem);
+          border: 1px solid #22d4fd;
+          border-radius: 0.4rem;
+          font-weight: 300;
+          cursor: pointer;
+          &:hover {
+            color: #1a7e94;
+            border: 1px solid #1a7e94;
+          }
+          i {
+            margin-right: calc(0.4rem + 0.1vh);
+            &:hover {
+              color: #1a7e94;
+            }
+          }
+        }
+      }
+    }
+    img {
+      width: calc(13rem + 5.5vh + 6.5vh);
+      margin-left: calc(2rem + 5.5vh + 2.5vh);
+    }
+  }
+}
+.container-fotter {
+  width: 100%;
+  height: 5.9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #22d4fd;
+  h6 {
+    color: #fff;
+    font-size: clamp(0.2rem, 2.2vw, 1.1rem);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 1185px) {
+  section {
+    align-items: start;
+    justify-content: center;
+    .container-section {
+      flex-direction: column-reverse;
+      .container-section-context {
+        .container-section-context-about-me {
+          width: 90%;
+          h1 {
+            font-size: clamp(1.3rem, 3.5vw, 2.1rem);
+            font-weight: 400;
+          }
+          p {
+            font-size: clamp(0.5rem, 1.2vw, 1rem);
+            font-weight: 300;
+          }
+        }
+        width: 80%;
+        div {
+          a {
+            padding: 10px;
+            font-size: clamp(0.5rem, 2.2vw, 2.4rem);
+          }
+        }
+      }
+    }
+  }
+  header {
+    div {
+      height: min(calc(1.5rem + 1.3vw), calc(0.5rem + 5.3vw));
+    }
+  }
+  img {
+    width: 250px !important;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 0 !important;
+  }
+  .container-fotter {
+    display: none;
+  }
+}
