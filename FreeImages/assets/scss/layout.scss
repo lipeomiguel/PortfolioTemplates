@@ -1,0 +1,60 @@
+header {
+  width: 100%;
+  height: 5.5rem;
+  padding-top: 0.1rem;
+  border-bottom: 1px solid #eee !important;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  h1 {
+    font-family: "Krona One" sans-serif;
+    font-size: clamp(1.1rem, 3.5vw, 1.7rem);
+    font-weight: 800;
+    margin-left: 1.4rem;
+  }
+  div {
+    height: 80%;
+    width: 3.8%;
+    background-color: red;
+    border-radius: 100%;
+    margin: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    h1 {
+      font-family: "Roboto Mono" sans-serif;
+      font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+      font-weight: 800;
+      margin-left: 0.1rem;
+      color: white;
+    }
+  }
+}
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12rem;
+  padding-top: 20px;
+  div {
+    width: 15.4rem;
+    height: 15.4rem;
+    background-color: #191e23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--color--BackgroundSecund);
+    border-radius: 1px;
+  }
+}
+.photo {
+  width: max(15.4rem, 15.4rem);
+  background-color: #191e23;
+}
+.info-photo {
+  background-color: #333537;
+}
