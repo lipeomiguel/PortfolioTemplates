@@ -14,14 +14,15 @@ header {
   input {
     width: 2.2rem;
     height: 2.3rem;
-    background-color: transparent;
-    border: 3px solid var(--cor-text-h1);
+    background-color: #00ff66;
+    border: 3px solid #4f6f52;
     border-radius: 1.5rem;
     font-size: clamp(1.1rem, 1vw, 0.5rem);
     transition: border ease-in-out 3.4s;
     text-align: center;
     &:hover {
-      border: 3px solid var(--cor-text-h2);
+      border: 3px solid #4f6f52;
+      background-color: #159749;
     }
   }
 }

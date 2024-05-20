@@ -1,5 +1,5 @@
 function PlusImg(urlIMG=false){
-  const GetNumbers = [document.querySelector(".GetNumber")][0].addEventListener("keydown",(event)=>{
+  const GetNumbers = [document.querySelector(".GetNumber")][0].addEventListener("click",(event)=>{
     const ajax = new xmlRequest("GET","https://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true");
     ajax.return(PlusImg); 
     let getMain = [document.querySelector(".GetMain")];
@@ -13,9 +13,9 @@ function PlusImg(urlIMG=false){
     createImg.setAttribute("src",replaceImg);
     createDiv.appendChild(createImg);
     getMain[0].appendChild(createDiv);
+    CountImg();
   })
 }
-
 function xmlRequest(method='GET',url='https://api.ipify.org?format=json',asyncCallback=true,callback=false){
   this.method = method;
   this.url = url;
